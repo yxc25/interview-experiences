@@ -18,7 +18,7 @@ LR 是 Link Register，专门存放函数返回地址。执行 BL 指令时硬�
 ### ⁠1.8. 什么是PC寄存器
 PC （ Program Counter）是程序计数器，保存下一条要执行的指令的地址。 CPU 每执行完一条指令，PC 自动增加（指向下一条），从而实现程序的顺序执行。
 ### ⁠1.9. 什么是SP寄存器
-SP 指向当前栈顶。 压栈时 SP 减小，出栈时 SP 增大。Cortex-M 有 MSP 和 PSP 两个，处理模式永远用 MSP，线程模式由 CONTROL 寄存器决定用哪个
+SP（ Stack Pointer）指向当前栈顶。 压栈时 SP 减小，出栈时 SP 增大。Cortex-M 有 MSP 和 PSP 两个，处理模式永远用 MSP，线程模式由 CONTROL 寄存器决定用哪个
 ### ⁠1.10. RTOS,FreeRTOS是什么，区别是什么
 RTOS（Real-Time Operating System，实时操作系统） 是一种保证任务在规定时间内完成的操作系统。它的核心不是“快”，而是“确定性”——任务从触发到执行的时间是可预测的。
 
@@ -30,8 +30,3 @@ RTOS 保证实时性靠的是抢占式优先级调度、确定性调度器、极
 ### ⁠1.13. Cortex-M 和 ARM 架构什么关系
 ARM 架构是 ARM 公司定义的指令集和处理器设计规范，Cortex-M 是 ARM 公司基于 ARMv6-M / v7-M / v8-M 这些具体架构版本，面向微控制器场景设计的处理器核心系列。芯片厂商拿到 Cortex-M 的 IP 核后，加上自己的存储和外设，做成 MCU。所以我们写的 STM32 固件，底层跑的就是 Cortex-M3/M4 这类内核。
 
-X86架构
-RSIC-V架构
-区别和联系
-
-什么是LR寄存器
